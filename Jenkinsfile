@@ -11,8 +11,9 @@ pipeline {
 
     stage('Maven build') {
       steps {
-        sh './scripts/run_all.sh'
         sh 'docker system prune -a --volumes -f'
+        sh './scripts/run_all.sh'
+       
       }
     }
 
